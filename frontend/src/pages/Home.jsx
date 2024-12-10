@@ -20,7 +20,6 @@ function Home() {
   const fetchDefaultNotes = () => {
     setLoading(true);
     axios
-      // .get("https://note-taking-app-backend-six.vercel.app/note/active")
       .get("http://localhost:5000/note/active")
       .then((res) => {
         setNotes(res.data.data);
@@ -30,7 +29,7 @@ function Home() {
       .catch((err) => console.log(err));
   };
 
-  //useEffect hook for load active data when system refreash
+  //useEffect hook load active data when system refreash karne ke liye
   useEffect(() => {
     fetchDefaultNotes();
   }, []);
@@ -39,7 +38,6 @@ function Home() {
   const handleSearch = () => {
     axios
       .get(
-        // `https://note-taking-app-backend-six.vercel.app/search?term=${searchTerm}`
         `http://localhost:5000/search?term=${searchTerm}`
       )
       .then((res) => {

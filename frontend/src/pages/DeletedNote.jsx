@@ -17,7 +17,6 @@ function DeletedNote() {
   //get spesific note
   useEffect(()=>{
     setLoading(true)
-    // axios.get(`https://note-taking-app-backend-six.vercel.app/note/${id}`)
     axios.get(`http://localhost:5000/note/${id}`)
     .then((res)=>{
       setNotes(res.data);

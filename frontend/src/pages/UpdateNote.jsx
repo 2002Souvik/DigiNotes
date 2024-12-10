@@ -26,7 +26,6 @@ function UpdateNote() {
   useEffect(() => {
     setLoading(true);
     axios
-      // .get("https://note-taking-app-backend-six.vercel.app/category")
       .get("http://localhost:5000/category")
       .then((res) => {
         setLoading(false);
@@ -43,7 +42,6 @@ function UpdateNote() {
   useEffect(() => {
     setLoading(true);
     axios
-      // .get(`https://note-taking-app-backend-six.vercel.app/note/${id}`)
       .get(`http://localhost:5000/note/${id}`)
       .then((res) => {
         setLoading(false);
@@ -74,7 +72,6 @@ function UpdateNote() {
       };
 
       axios
-        // .put(`https://note-taking-app-backend-six.vercel.app/note/${id}`, newNote)
         .put(`http://localhost:5000/note/${id}`, newNote)
         .then(() => {
           alert("Note Updated Successfully");

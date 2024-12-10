@@ -43,7 +43,7 @@ app.use('/auth', require('./routes/auth'))
 
 
 const PORT = process.env.PORT || 5000;
-const URL = process.env.URL || 'mongodb+srv://rrpb2580:N3WDETYUMuzILT3F@cluster0.dpnp0.mongodb.net/'
+const URL = process.env.URL || 'mongodb+srv://dharsouvik2002:4ZWVv2bEhQdOxmw4@souvik.ebdq4.mongodb.net/?retryWrites=true&w=majority&appName=souvik/'
 
 
 //establish connection to mongodb  database using mongoose

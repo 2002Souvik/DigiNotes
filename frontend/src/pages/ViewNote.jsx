@@ -16,7 +16,6 @@ function ViewNote() {
   useEffect(() => {
     setLoading(true);
     axios
-      // .get(`https://note-taking-app-backend-six.vercel.app/note/${id}`)
       .get(`http://localhost:5000/note/${id}`)
       .then((res) => {
         setNotes(res.data);
@@ -30,7 +29,6 @@ function ViewNote() {
   //used to get spesific category who owned this note
   useEffect(() => {
     axios
-      // .get(`https://note-taking-app-backend-six.vercel.app/category/${categoryId}`)
       .get(`http://localhost:5000/category/${categoryId}`)
       .then((res) => {
         setCategory(res.data);
