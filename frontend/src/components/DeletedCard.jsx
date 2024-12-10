@@ -18,7 +18,6 @@ function DeletedCard({ data }) {
   useEffect(() => {
     setLoading(true);
     axios
-      // .get(`https://note-taking-app-backend-six.vercel.app/category/${data.category}`)
       .get(`http://localhost:5000/category/${data.category}`)
       .then((res) => {
         setLoading(false);
